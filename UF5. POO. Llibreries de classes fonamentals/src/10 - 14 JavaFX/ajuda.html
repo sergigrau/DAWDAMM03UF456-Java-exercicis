@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Esdeveniments i propietats amb jQuery">
+    <meta name="keywords" content="HTML,CSS,jQuery,JavaScript">
+    <meta name="author" content="sergi.grau@fje.edu">
+    <meta name="version" content="1.0 17.12.2014">
+
+    <title>jQuery 8</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+            $('#css-btn').click(function() {
+                $('#imatge').prop("src", "css3.png");
+            });
+            $('#js-btn').click(function() {
+                $('#imatge').prop("src", "js.png");
+            });
+            $('#html5-btn').click(function() {
+                $('#imatge').prop("src", "html5.png");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="css3.png" id="imatge" />
+    <button id="css-btn">CSS</button>
+    <button id="js-btn">JS</button>
+    <button id="html5-btn">HTML5</button>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Recepta [
+ 	<!ELEMENT Recepta (Nom, Descripcio?, Ingredients?, Instruccions?)>
+  	<!ELEMENT Nom (#PCDATA)>
+   	<!ELEMENT Descripcio (#PCDATA)>
+   	<!ELEMENT Ingredients (Ingredient)*>
+    <!ELEMENT Ingredient (Quantitat, Item)>
+	<!ELEMENT Quantitat (#PCDATA)>
+  		<!ATTLIST Quantitat unitat CDATA #REQUIRED>
+	<!ELEMENT Item (#PCDATA)>
+        <!ATTLIST Item opcional CDATA "0" vegetaria CDATA "si"> 
+	<!ELEMENT Instruccions (Pas)+>
+	<!ELEMENT Pas (#PCDATA)>	   
+]>
+<!-- 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE person SYSTEM "Exercici13.dtd"> 
+-->
+
+<!--
+<!DOCTYPE Recepta 
+PUBLIC “-//FJE//DTD RECEPTA 1.0 /CA” 
+“https://sites.google.com/a/fje.edu/sergigrau/recepta.dtd”> 
+-->
+<Recepta>
+ 	<Nom>Truita de patates</Nom>
+ 	<Descripcio> 
+		La truita de patates tradicional i típica, tal com la
+		fan totes les mares.
+	</Descripcio>
+	<Ingredients>
+		<Ingredient>
+			<Quantitat unitat="peça">3</Quantitat>
+			<Item>Patata</Item>
+		</Ingredient>
+                <Ingredient>
+			<Quantitat unitat="peça">3</Quantitat>
+			<Item>Patata</Item>
+		</Ingredient>
+		<Ingredient>
+			<Quantitat unitat="peça">2</Quantitat>
+			<Item>Ous</Item>
+		</Ingredient>
+				<Ingredient>
+			<Quantitat unitat="litre">0.1</Quantitat>
+			<Item>Oli</Item>
+		</Ingredient>
+	</Ingredients>
+	<Instruccions>
+		<Pas>
+			Pelar i tallar la patata a rodanxes
+		</Pas>
+		<Pas>
+			Posar oli en una paella
+		</Pas>
+		<!-- I així seguim... -->
+	</Instruccions>
+</Recepta>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane 
+    
+    maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fje.daw2dam2.SumaController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button mnemonicParsing="false" onAction="#sumar" text="suma" GridPane.rowIndex="2" />
+        <Label text="Numero 1" />
+        <Label text="Numero 2" GridPane.rowIndex="1" />
+        <TextField fx:id="numero1" promptText="entra numero 1" GridPane.columnIndex="1" />
+        <TextField fx:id="numero2" promptText="entra numero 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label fx:id="resultat" text="El resultat és " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </children>
+</GridPane>

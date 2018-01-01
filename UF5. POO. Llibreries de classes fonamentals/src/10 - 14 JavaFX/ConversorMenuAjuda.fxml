@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import edu.fje.daw2dam2.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="edu.fje.daw2dam2.ConversorMenuAjudaController">
+	<children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="veure ajuda" onAction="#veureAjuda"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox fx:id="contingut">
+		<Label text="Caràcter" />
+		<TextField fx:id="entrada" onAction="#operar" />
+		<TableView fx:id="taula" prefHeight="200.0" prefWidth="200.0">
+			<columns>
+				<TableColumn editable="false"
+					prefWidth="100.0" sortable="false" text="tipus">
+					<cellValueFactory>
+						<PropertyValueFactory property="tipus" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn   prefWidth="100.0" text="valor">
+					<cellValueFactory>
+						<PropertyValueFactory property="valor" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<Dada tipus="Sergi" valor="Grau" />
+				</FXCollections>
+			</items>
+		
+		</TableView>
+		</VBox>
+	</children>
+</VBox>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stocks>
+       <stock>
+              <simbol>Citibank</simbol>
+              <preu>100</preu>
+              <quantitat>1000</quantitat>
+       </stock>
+       <stock>
+              <simbol>Axis bank</simbol>
+              <preu>90</preu>
+              <quantitat>2000</quantitat>
+       </stock>
+</stocks>
