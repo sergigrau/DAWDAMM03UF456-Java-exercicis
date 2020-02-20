@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import edu.fje.daw2dam2.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="edu.fje.daw2dam2.TaulaXMLController">
+	<children>
+		<Button fx:id="boto" onAction="#carregar" text="carrega dades"/>
+		<TableView fx:id="taula" prefHeight="300.0" prefWidth="300.0">
+			<columns>
+				<TableColumn editable="false"
+					prefWidth="100.0" sortable="false" text="simbol">
+					<cellValueFactory>
+						<PropertyValueFactory property="simbol" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn   prefWidth="100.0" text="preu">
+					<cellValueFactory>
+						<PropertyValueFactory property="preu" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn   prefWidth="100.0" text="quantitat">
+					<cellValueFactory>
+						<PropertyValueFactory property="quantitat" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+				</FXCollections>
+			</items>
+		
+		</TableView>
+	</children>
+</VBox>
