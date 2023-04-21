@@ -1,13 +1,9 @@
+package edu.fje;
+
 import java.sql.*;
 import java.io.*;
 import java.util.*;
 
-/**
- * Classe que permet el tractament d'alumnes en una taula Alumne
- *
- * @author sergi grau
- * @version 1.0, 02.03.2010
- */
 public class TractamentAlumnesNotes {
 
     private static Connection conn;
@@ -136,9 +132,11 @@ public class TractamentAlumnesNotes {
      * @return la connexi amb la BD
      */
     public static Connection obtenirConnexio() throws SQLException, IOException {
-        
+
         Properties propietats = new Properties();
-        FileInputStream fitxerEntrada = new FileInputStream(System.getProperty("user.dir")+ "/src/exercicis/database.properties");
+        FileInputStream fitxerEntrada =
+                new FileInputStream(TractamentAlumnesNotes.class.getResource("/database.properties").getFile());
+
         propietats.load(fitxerEntrada);
         fitxerEntrada.close();
 
